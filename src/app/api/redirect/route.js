@@ -14,9 +14,12 @@ export async function GET(request) {
     
     try { 
         await miro.exchangeCodeForAccessToken(userId, code); 
+        console.log("user id", userId);
     }
     catch (error) { 
         redirect('/?error'); 
     } 
-    redirect(`/`); 
+    //redirect(`https://miro.com/app/board/uXjVLnhyJg4=/`); 
+    // redirect(`http://localhost:3000/`); 
+    // redirect(`/`);  original
 } 
